@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Lapitchat</string>
+    <string name="need_a_new_account">need a new account ?</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+
+    <string name="logout">LogOut</string>
+    <string name="password">password</string>
+    <string name="already_have_account">Already have account</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_status">Hi, i\'m using ztalk App</string>
+</resources>
