@@ -41,10 +41,10 @@
         android:id="@+id/settings_image_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/settings_name"
-        android:layout_alignStart="@+id/settings_name"
+        android:layout_alignEnd="@+id/settings_name"
+        android:layout_alignRight="@+id/settings_name"
         android:layout_below="@+id/settings_status"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="36dp"
         android:text="change image" />
 
     <Button
