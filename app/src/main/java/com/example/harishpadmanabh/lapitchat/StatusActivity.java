@@ -33,7 +33,7 @@ public class StatusActivity extends AppCompatActivity {
 
         mCurrentUser= FirebaseAuth.getInstance().getCurrentUser();
         String current_uid=mCurrentUser.getUid();
-        mStatusDatabase= FirebaseDatabase.getInstance().getReference().child("users").child(current_uid);
+        mStatusDatabase= FirebaseDatabase.getInstance().getReference().child("Users").child(current_uid);
         mtoolbar=(Toolbar) findViewById(R.id.status_appbar);
 
         mStatus=(TextInputLayout) findViewById(R.id.status_input);
@@ -43,6 +43,8 @@ public class StatusActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Account Status ");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        String status_value=getIntent().getStringExtra("status_value");
+        mStatus.getEditText().setText(status_value);
         mSavebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,9 +52,10 @@ public class StatusActivity extends AppCompatActivity {
 
                 mprogress.setTitle("Saving Changes ");
                 mprogress.setMessage("Please wait while we save the changes ");
-                mprogress.dismiss();
+                mprogress.show();
 
                 String status=mStatus.getEditText().getText().toString();
+
                 mStatusDatabase.child("status").setValue(status).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
@@ -62,7 +65,7 @@ public class StatusActivity extends AppCompatActivity {
                         }
                         else 
                         {
-                            Toast.makeText(StatusActivity.this, "There was some error in saving changes", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "There was some error in saving changes", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

@@ -43,8 +43,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/settings_name"
         android:layout_alignStart="@+id/settings_name"
-        android:layout_below="@+id/settings_name"
-        android:layout_marginTop="80dp"
+        android:layout_below="@+id/settings_status"
+        android:layout_marginTop="48dp"
         android:text="change image" />
 
     <Button
@@ -54,7 +54,7 @@
         android:layout_alignLeft="@+id/settings_image_btn"
         android:layout_alignStart="@+id/settings_image_btn"
         android:layout_below="@+id/settings_image_btn"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="28dp"
         android:text="change status" />
 
 
